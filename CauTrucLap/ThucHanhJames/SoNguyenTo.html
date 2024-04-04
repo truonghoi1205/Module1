@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+
+    let countSNT = 0;
+    let number = 2;
+
+    while (true) {
+        let count = 0;
+        for (let i = 1 ; i <= number ; i++) {
+            if(number % i === 0) {
+                count++;
+            }
+        }
+        if (count === 2) {
+            console.log(number);
+            countSNT++;
+        }
+        number++;
+
+        if (countSNT === 20) {
+            break;
+        }
+    }
+</script>
+</body>
+</html>

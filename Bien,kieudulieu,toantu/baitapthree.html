@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>dientich, chuvi hcn</title>
+</head>
+<body>
+
+<input type="number" id="a">
+<button onclick="dientich()">nhấn</button>
+<h3 id="result"></h3>
+<h3 id="result2"></h3>
+<script>
+
+    function dientich() {
+        let r = document.getElementById('a').value;
+        let S = document.getElementById('a').value;
+        let P = document.getElementById('a').value;
+        const pi = 3.14;
+        S = pi*r*r
+        P = pi*r*2
+        document.getElementById('result').innerHTML='chu vi hình tròn = ' + P;
+        document.getElementById('result2').innerHTML='diện tích hình tròn = ' + S;
+    }
+
+
+
+</script>
+
+
+</body>
+</html>

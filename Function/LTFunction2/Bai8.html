@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.  </title>
+</head>
+<body>
+<script>
+    function number(array) {
+        let first = 0;
+        let last = array.length-1;
+        while(first<last) {
+            let b = array[first];
+            array[first] = array[last];
+            array[last] = b;
+            first++;
+            last--;
+        } return array
+    }
+
+    console.log(number([1,4,6,5,8,3]));
+
+</script>
+</body>
+</html>

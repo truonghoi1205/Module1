@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo máy tính</title>
+</head>
+<body>
+
+<h2>Calculator</h2>
+<table>
+    <tr>
+        <td><input type="number" id="a"></td>
+        <td><input type="number" id="b"></td>
+        <td></p result="text"></p> </td>
+    </tr>
+    <tr>
+        <button onclick="pheptinh('+')">Addition(+)</button>
+        <button onclick="pheptinh('-')">Subtraction(-)</button>
+        <button onclick="pheptinh('*')">multiplication(*)</button>
+        <button onclick="pheptinh('/')" >division(/)</button>
+    </tr>
+</table>
+<h3 id="result"></h3>
+
+<script>
+    function pheptinh(operator) {
+        let number1 = + document.getElementById('a').value;
+        let number2 = + document.getElementById('b').value;
+        let result =0;
+        if(operator==="+"){
+            result=number1+number2
+        }
+        if(operator==="-"){
+            result=number1-number2
+        }
+        if(operator==="*"){
+            result=number1*number2
+        }
+        if(operator==="/"){
+            result=number1/number2
+        }
+        document.getElementById('result').innerHTML='kết quả = ' + result;
+
+    }
+</script>
+
+</body>
+</html>

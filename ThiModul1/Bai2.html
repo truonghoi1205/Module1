@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    /*Viết hàm insertNumberToArray() nhận vào một mảng các số
+    nguyên, một số nguyên x, và một số nguyên vị trí index. Hàm
+    trả về mảng ban đầu nếu vị trí index có giá trị nhỏ hơn 0 hoặc
+    lớn hơn chiều dài mảng. Nếu không thì trả về mảng mới đã
+    được thêm số x vào vị trí index. (không dùng hàm có sẵn để
+    tính)*/
+
+    function insertNumberToArray(arr, x, index) { // [3,5,3,2,6,7]; x=3; index=2
+        if (index < 0 || index > arr.length) {
+            return arr;
+        }
+        for (let i = arr.length - 1; i >= index; i--) {
+            arr[i + 1] = arr[i];
+        }
+        arr[index] = x;
+        return arr;
+    }
+
+    let arr1 = [3, 5, 2, 6, 7];
+    let x1 = 10;
+    let index1 = 3;
+
+    console.log(insertNumberToArray(arr1, x1, index1));
+
+</script>
+</body>
+</html>

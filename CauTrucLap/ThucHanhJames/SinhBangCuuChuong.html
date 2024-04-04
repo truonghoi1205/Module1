@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sinh Bảng Cửu Chương</title>
+</head>
+<body>
+<table id="bcc" border="1"></table>
+<script>
+    let html = ""
+    for(let i = 1; i <= 10; i++ ) {
+        html += '<tr>'
+        for(let j = 2; j <= 9; j++) {
+            html += '<td>' + j + ' x ' + i + ' = ' + i*j + '</td>';
+        }
+        html += '</tr>'
+    }   document.getElementById('bcc').innerHTML = html
+
+
+</script>
+
+</body>
+</html>

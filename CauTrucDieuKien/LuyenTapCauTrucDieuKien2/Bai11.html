@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính thuế thu nhập cá nhân.</title>
+</head>
+<body>
+<input type="text" id="thunhap">
+<button onclick="kt()">kiểm tra</button>
+<p id="result"></p>
+<script>
+    function kt() {
+        let TN = +document.getElementById('thunhap').value;
+        if (TN<=5000000) {
+            document.getElementById('result').innerHTML='Thuế = '+ TN*5/100
+        } else if (TN>5000000 && TN<= 10000000) {
+            document.getElementById('result').innerHTML='Thuế = '+ (TN*10/100-250000)
+        } else if (TN>10000000 && TN<= 18000000) {
+            document.getElementById('result').innerHTML='Thuế = '+ (TN*15/100-750000)
+        } else if (TN>18000000 && TN<= 32000000) {
+            document.getElementById('result').innerHTML='Thuế = ' + (TN*20/100-1650000)
+        } else if (TN>32000000 && TN<= 52000000) {
+            document.getElementById('result').innerHTML='Thuế = ' + (TN*25/100-3250000)
+        } else if (TN>52000000 && TN<= 80000000) {
+            document.getElementById('result').innerHTML='Thuế = ' + (TN*30/100-5850000)
+        } else {
+            document.getElementById('result').innerHTML='Thuế = ' + (TN*35/100-9850000)
+        }
+    }
+</script>
+</body>
+</html>

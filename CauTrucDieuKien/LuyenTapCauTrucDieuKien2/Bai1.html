@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi độ C sang độ F</title>
+</head>
+<body>
+<input type="text" id="C">
+<button onclick="doido()">Đổi</button>
+<p id="result"></p>
+<script>
+
+  function doido() {
+      let doC = Number(document.getElementById("C").value);
+      let doF = doC*9/5+32
+          document.getElementById('result').innerHTML=doF + ' độ F'
+  }
+
+</script>
+</body>
+</html>

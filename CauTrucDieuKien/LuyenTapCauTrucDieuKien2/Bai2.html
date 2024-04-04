@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển mét sang feet</title>
+</head>
+<body>
+<input type="text" id="M">
+<button onclick="doi()">Đổi</button>
+<p id="result"></p>
+
+<script>
+    function doi() {
+        let met = document.getElementById('M').value;
+        let ft = met*3.2808
+        document.getElementById('result').innerHTML=ft + ' FEET'
+
+    }
+</script>
+</body>
+</html>

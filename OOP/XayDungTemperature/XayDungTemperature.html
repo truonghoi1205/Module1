@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        celsius;
+        fahrenheit;
+        kenvin;
+
+        constructor(celsiusInput, fahrenheitInput, kenvinInput) {
+            this.celsius = celsiusInput;
+            this.fahrenheit = fahrenheitInput;
+            this.kenvin = kenvinInput;
+        }
+        getCforF() {
+            return  this.fahrenheit = this.celsius*9/5 +32
+
+        }
+        getCforK () {
+            return this.kenvin = this.celsius + 273.1500
+        }
+    }
+
+    let Temperature1 = new Temperature(25)
+    document.write(`Nhiệt độ F: ${Temperature1.getCforF()}<br> Nhiệt độ K: ${Temperature1.getCforK()}`)
+</script>
+</body>
+</html>

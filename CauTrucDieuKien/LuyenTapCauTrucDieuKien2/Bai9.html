@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra a,b,c có phải là cạnh một tam giác</title>
+</head>
+<body>
+<input type="number" id="canh1">
+<input type="number" id="canh2">
+<input type="number" id="canh3">
+<button onclick="kiemtra()">Kiểm tra</button>
+<p id="result"></p>
+<script>
+    function kiemtra() {
+        let a = document.getElementById('canh1').value;
+        let b = document.getElementById('canh2').value;
+        let c = document.getElementById('canh3').value;
+        if (a&&b&&c>0 && a + b > c && b + c > a && a + c > b) {
+            document.getElementById('result').innerHTML='Là cạnh của một tam giác'
+        } else {
+            document.getElementById('result').innerHTML='Không phải là cạnh của một tam giác'
+        }
+    }
+</script>
+</body>
+</html>

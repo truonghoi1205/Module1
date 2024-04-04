@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+</head>
+<style>
+
+    table{
+        border-collapse:collapse;
+    }
+    table tr:nth-child(odd){
+        background-color:#e4e4e4;
+    }
+</style>
+
+<body>
+<h2>Add New Product</h2>
+
+
+<table style="width: 370px;"  >
+    <tr style="height: 70px;">
+        <td style="text-align: center; border-radius: 3px;"colspan="2" ><input onchange="creatNewProduct()" type="text" id = "newP" placeholder="NewProduct" style="width: 260px; height: 31px; border: 1px solid #bebebe; border-radius: 3px ;">
+            <button onclick="creatNewProduct()" style="background-color: rgb(60, 199, 69); color: rgb(255, 255, 255); border-radius: 4px;padding: 9px 18px; border: 1px solid #e4e4e4;" >Add</button></td>
+    </tr>
+
+</table>
+<table style="width: 550px;"  >
+    <tr style="background-color: #ffffff;">
+        <td><h3>Display All Product</h3><br><h4>Product Name</h4></td>
+
+        <td style="text-align: right; vertical-align: bottom;" colspan="2"><h4 id="sumOfProducts" style="color: rgb(158, 25, 25);" ></h4></td>
+
+    </tr>
+
+    <tbody id="products">
+
+    </tbody>
+</table>
+
+<script>
+    let ProductList = [];
+    //tên hàm: showProduct
+    //ds tham số: không có
+    //dl trả về: không có
+    //chức năng: Lập danh sách sản phẩn, điền vào trong thẻ có id='products'
+    function showProduct() {
+        let content = "";
+        for (let i = 0; i< ProductList.length; i++) {
+            content += '<tr style="height: 45px;">\n' +
+                '             <td >'+ProductList[i]+'</td>\n'+
+                '             <td style="width: 150px;"><button onclick ="editProduct('+i+')" style="background-color: rgb(60, 199, 69); color: rgb(255, 255, 255);border-radius: 4px; padding: 7px 18px; border: 1px solid #e4e4e4;">Edit</button></td>\n'+
+                '             <td style="width: 150px;"><button onclick ="deleteProduct('+i+')" style="background-color: rgb(60, 199, 69); color: rgb(255, 255, 255);border-radius: 4px; padding: 8px 18px; border: 1px solid #e4e4e4;">Delete</button></td>\n'+
+                '      </tr>'
+        }
+        document.getElementById("products").innerHTML = content;
+        document.getElementById("sumOfProducts").innerText = ProductList.length + " Product";
+    }
+    showProduct();
+    //tên hàm: creatNewProduct
+    //ds tham số: không có
+    //dl trả về: không có
+    //chức năng: Lấy dữ liệu, Push vào mảng, hiển thị lại dữ liệu
+    function creatNewProduct() {
+        let newP = document.getElementById("newP").value;
+        ProductList.push(newP);
+        showProduct();
+        document.getElementById("newP").value = ""
+    }
+    //tên hàm: deleteProduct
+    //ds tham số: index
+    //dl trả về: không có
+    //chức năng: xóa sp theo index
+    //Hiển thị lại danh sách
+    function deleteProduct(index) {
+        ProductList.splice(index,1);
+        showProduct();
+    }
+    //tên hàm: editProduct
+    //ds tham số: index
+    //dl trả về: không có
+    // chức năng: sửa sp theo index
+    //1. cho người dùng nhập vào sp mới
+    //2. gán lại sp mới cho sp cũ
+    //3. hiển thị lại danh sách
+    function editProduct(index) {
+        let newValue = prompt('Sửa sp',ProductList[index]);
+        ProductList[index] = newValue;
+        showProduct();
+    }
+</script>
+</body>
+</html>

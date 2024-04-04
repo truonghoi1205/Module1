@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+<h1>Tính chỉ số cân nặng</h1>
+Nhập cân nặng: (kg) <input type="text" id="w">
+<br>
+Nhập chiều cao: (m) <input type="text" id="h">
+<br>
+<button onclick="chiso()">Kiểm tra</button>
+<br>
+<p id="result"></p>
+
+<script>
+    function chiso() {
+        let weight = document.getElementById('w').value;
+        let height = document.getElementById('h').value;
+        let bmi = weight / (height * height)
+        if (bmi < 18) {
+            document.getElementById('result').innerHTML='Chỉ số BMI của bạn là:' + ' ' + bmi + '. Bạn thiếu cân. Ăn thật nhiều vào nhé';
+
+        } else if (bmi < 25.0) {
+            document.getElementById('result').innerHTML='Chỉ số BMI của bạn là:' + ' ' + bmi + '. Bạn bình thường. Cố gắng phát huy';
+        } else if (bmi < 30.0) {
+            document.getElementById('result').innerHTML='Chỉ số BMI của bạn là:' + ' ' + bmi + '. Bạn thừa cân. Tập luyện thôi nào';
+        } else {
+            document.getElementById('result').innerHTML='Chỉ số BMI của bạn là:' + ' ' + bmi + '. Bạn béo phì. Cần giảm cân gấp!!!';
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

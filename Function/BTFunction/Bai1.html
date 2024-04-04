@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+
+        if (number < 2) {
+            return number + " không phải là SNT"
+        }
+        for(let i = 2; i<number; i++) {
+            if (number%i === 0) {
+                return number + " Không phải là SNT"
+            }
+        }
+        return number +" là SNT"
+    }
+    for (let j = 0; j < 10000; j++) {
+
+        console.log(isPrime(j));
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cho người dùng nhập vào 1 số và in ra số lần xuất hiện của số đó trong mảng.</title>
+</head>
+<body>
+<script>
+    let numbers =  [1,7,5,9,2,6,7,9,7];
+    let count = 0;
+    let a = +prompt('nhập số')
+    for(let i = 0; i<numbers.length;i++) {
+
+        if(numbers[i] === a) {
+            count++
+        }
+    } console.log(count)
+</script>
+</body>
+</html>

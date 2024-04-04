@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In ra max của các phần tử chẵn mảng</title>
+</head>
+<body>
+<script>
+    let numbers = [1,7,5,9,2,6];
+    let max = numbers[0]
+    for(let i=0; i<numbers.length;i++) {
+        if(numbers[i]%2 === 0 && numbers[i]>max) {
+            max = numbers[i]
+        }
+    } console.log(max)
+</script>
+</body>
+</html>

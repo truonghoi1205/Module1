@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.</title>
+</head>
+<body>
+<script>
+    function number(num1,num2,num3) {
+        let min = num1;
+        if(min>num2) {
+            min = num2;
+        }
+        if(min>num3) {
+            min = num3;
+        }
+        return min;
+    }
+    let a = +prompt('số 1')
+    let b = +prompt('số 2')
+    let c = +prompt('số 3')
+    let d = number(a,b,c);
+    document.write('số nhỏ nhất là: ' + d)
+</script>
+</body>
+</html>

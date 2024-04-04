@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+<style>
+    td input {
+        width: 50px;
+        height: 30px;
+    }
+    th input {
+        width: 205px;
+        height: 20px;
+        text-align: right;
+    }
+
+</style>
+<body>
+<table>
+    <tr>
+        <th colspan="4"><input type="text" id="nhap" value="0" readonly></th>
+    </tr>
+    <tr>
+        <td><input type="button" value="1" onclick="getData(event)"></td>
+        <td><input type="button" value="2" onclick="getData(event)"></td>
+        <td><input type="button" value="3" onclick="getData(event)"></td>
+        <td><input type="button" value="+" onclick="getData(event)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4" onclick="getData(event)"></td>
+        <td><input type="button" value="5" onclick="getData(event)"></td>
+        <td><input type="button" value="6" onclick="getData(event)"></td>
+        <td><input type="button" value="-" onclick="getData(event)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7" onclick="getData(event)"></td>
+        <td><input type="button" value="8" onclick="getData(event)"></td>
+        <td><input type="button" value="9" onclick="getData(event)"></td>
+        <td><input type="button" value="*" onclick="getData(event)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="C" onclick="xoa()"></td>
+        <td><input type="button" value="0" onclick="getData(event)"></td>
+        <td><input type="button" value="=" onclick="bang()"></td>
+        <td><input type="button" value="/" onclick="getData(event)"></td>
+    </tr>
+</table>
+<script>
+    let pheptinh = '';
+    function getData(event) {
+        let a = event.target.value;
+        pheptinh += a;
+       document.getElementById('nhap').value = pheptinh;
+    }
+    function xoa() {
+        pheptinh = "";
+        document.getElementById('nhap').value= "0";
+    }
+    function bang() {
+        let result = eval(pheptinh);
+        pheptinh = result;
+        document.getElementById('nhap').value=pheptinh;
+    }
+
+</script>
+</body>
+</html>

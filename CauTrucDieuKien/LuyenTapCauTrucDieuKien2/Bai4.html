@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</title>
+</head>
+<body>
+<input type="number" id="a"> chiều dài
+<br>
+<input type="number" id="b"> chiều rộng
+<br>
+<button onclick="tinh()">tính</button>
+<p id="result"></p>
+<script>
+    function tinh() {
+        let dai = document.getElementById('a').value;
+        let rong = document.getElementById('b').value;
+        let S = dai*rong
+        document.getElementById('result').innerHTML='kết quả ' + S
+    }
+</script>
+
+</body>
+</html>

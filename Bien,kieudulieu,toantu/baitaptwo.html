@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đổi độ C sang F</title>
+</head>
+<body>
+
+<input type="number" id="a">
+<button onclick="doi()">Nhập</button>
+<h3 id="result"></h3>
+
+<script>
+    function doi() {
+
+        let F = document.getElementById('a').value;
+        let C = document.getElementById('a').value;
+        F = 9*C/5+32
+        document.getElementById("result").innerHTML='kết quả = '+F
+    }
+
+</script>
+
+</body>
+</html>

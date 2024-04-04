@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</title>
+</head>
+<body>
+<script>
+    function giaithua(a) {
+        if (a < 0) {
+            return false;
+        }
+        if (a === 0 || a === 1) {
+            return 1 ;
+        }
+        // if (a > 0) {
+        //     let r = 1
+        //     for (let i = 2; i <= a; i++) {
+        //       r *= i;
+        //     } return r
+        // }
+        return a * giaithua(a - 1)
+    }
+    console.log(giaithua(5));
+</script>
+</body>
+</html>

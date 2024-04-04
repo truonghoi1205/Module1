@@ -1,0 +1,7 @@
+git init: khởi tạo local repository
+git remote add origin: kết nối local repo với remote repo
+git config --global user.name truonghoi1205
+git config --global user.gmail phamtruonghoi.dmx@gmail.com
+git add <tên file>: đẩy file demo.txt vào staging area
+git commit -m "hello": đưa thay đổi vào local repo, tạo 1 snap shot lưu trữ lại lịch sử
+git push origin master: đẩy code từ local repo lên remote repo

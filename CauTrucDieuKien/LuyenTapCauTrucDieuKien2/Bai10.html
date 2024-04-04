@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính giá điện.</title>
+</head>
+<body>
+<input type="text" id="diennang">
+<button onclick="tinh()">Tính giá điện</button>
+<p id="result"></p>
+<script>
+    function tinh() {
+        let kwh = +document.getElementById('diennang').value;
+        if (kwh>0 && kwh<= 50) {
+            document.getElementById('result').innerHTML= kwh*1.806
+        } else if (kwh>50 && kwh<=100) {
+            document.getElementById('result').innerHTML= kwh*1.866
+        } else if (kwh>100 && kwh<=200) {
+            document.getElementById('result').innerHTML= kwh*1.866
+        } else  {
+            document.getElementById('result').innerHTML= kwh*2.649
+        }
+
+    }
+</script>
+
+</body>
+</html>

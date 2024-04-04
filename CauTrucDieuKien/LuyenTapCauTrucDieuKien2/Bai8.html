@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số tuổi</title>
+</head>
+<body>
+<input type="number" id="a">
+<button onclick="kiemtra()">Kiểm tra</button>
+<p id="result"></p>
+<script>
+    function kiemtra() {
+        let age = parseInt(document.getElementById('a').value);
+        if (age < 120 && age > 0) {
+            document.getElementById('result').innerHTML='Là tuổi của một người'
+        } else {
+            document.getElementById('result').innerHTML='Không phải là tuổi của một người'
+        }
+    }
+</script>
+</body>
+</html>

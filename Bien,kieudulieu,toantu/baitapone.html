@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bàitập điểmtrungbình</title>
+</head>
+<body>
+
+<input type="number" id="a" >
+<input type="number" id="b" >
+<input type="number" id="c" >
+<button onclick="sum()">tổng</button>
+<h3 id="result"></h3>
+<h3 id="result2"></h3>
+
+<script>
+    function sum() {
+        let maths = Number(document.getElementById('a').value);
+        let physical = Number(document.getElementById('b').value);
+        let biology = Number(document.getElementById('c').value);
+        tong = (maths) + (physical) + (biology)
+        trungbinh = tong/3
+        document.getElementById('result').innerHTML='tổng 3 môn = ' + tong;
+        document.getElementById('result2').innerHTML='điểm trung bình = ' + trungbinh;
+    }
+
+</script>
+
+</body>
+</html>

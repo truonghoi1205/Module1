@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi tiền</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Curency</th>
+        <th>To Curency</th>
+    </tr>
+    <tr>
+        <td><input type="number" id="amount"></td>
+        <td>
+            <select id="from">
+                <option value="24655.00">VietNam</option>
+                <option value="1">USD</option>
+                <option value="147.91">YEN</option>
+                <option value="1316.95">WON</option>
+            </select>
+        </td>
+        <td>
+            <select id="to">
+                <option value="24655.00">VietNam</option>
+                <option value="1">USD</option>
+                <option value="147.91">YEN</option>
+                <option value="1316.95">WON</option>
+        </td>
+        <td><button onclick="doitien()">Đổi</button></td>
+    </tr>
+</table>
+<h3 id="result"></h3>
+
+
+<script>
+    function doitien() {
+
+        let amount = document.getElementById('amount').value;
+        let from = document.getElementById('from').value;
+        let to = document.getElementById('to').value;
+        let result = amount*to/from
+        document.getElementById('result').innerHTML='result=' + result;
+
+
+    }
+
+</script>
+</body>
+</html>

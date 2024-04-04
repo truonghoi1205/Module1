@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kt số có thuộc mảng không?nếu thuộc thì xóa, không thì thôi </title>
+</head>
+<body>
+<script>
+//iết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+//Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng
+//(Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)
+let arr = []; //[2,3,5,3,-1]
+for (let i = 0; i < 5; i++) {
+    let a = +prompt('nhập vào: ');
+    arr.push(a);
+}
+let index = -1;
+let V = +prompt('nhập vào phần tử: ');
+
+for (let i = 0; i < arr.length; i++) {
+    if (V === arr[i]) {
+        index = i;
+        break;
+    }
+}
+if (index === -1) {
+    console.log(arr);
+} else {
+    for (let i = index; i < arr.length - 1; i++) {
+        arr[i] = arr[i + 1];
+    }
+
+    arr[arr.length - 1] = 0;
+    console.log(arr);
+}
+
+
+</script>
+</body>
+</html>

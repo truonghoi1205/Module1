@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm sao</title>
+</head>
+<body>
+<script>
+    let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let str = prompt('nhập vào tên ngôi sao');
+    let index = -1;
+
+    function find(str) {
+
+        for (let i = 0; i < arr1.length; i++) {
+            if (str === arr1[i]) {
+                index = i;
+                break;
+            }
+        }
+        if (index !== -1) {
+            alert(arr2[index])
+        } else {
+            document.write('không tìm thấy sao')
+        }
+    }
+    find(str)
+</script>
+</body>
+</html>

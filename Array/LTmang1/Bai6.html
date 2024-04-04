@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên có nằm trong mảng không.</title>
+</head>
+<body>
+<script>
+// Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử,
+// nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không?
+// Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".
+    let arr = [];//[2,3,5,3,-1]
+    for (let i = 0; i < 5; i++) {
+        let a = +prompt('nhập vào: ');
+        arr.push(a);
+    }
+    let V = +prompt('nhập vào phần tử: ');
+    for (let i = 0;i<arr.length;i++) {
+        if (V === arr[i]) {
+            console.log("V is in the array")
+            break;
+        } else {
+            console.log("V is not in the array");
+            break;
+        }
+    }
+</script>
+</body>
+</html>

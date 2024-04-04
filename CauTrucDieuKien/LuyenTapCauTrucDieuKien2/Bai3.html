@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình vuông khi biết cạnh a.</title>
+</head>
+<body>
+<input type="number" id="a">
+<button onclick="tinh()">tính</button>
+<p id="result"></p>
+<script>
+    function tinh() {
+        let canh = document.getElementById('a').value;
+        let S = canh*canh
+        document.getElementById('result').innerHTML='kết quả = ' + S
+    }
+
+</script>
+</body>
+</html>

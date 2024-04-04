@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình để đếm số từ trong một chuỗi</title>
+</head>
+<body>
+<script>
+    let str = "  hoc code cung    codegym ";
+    //cách 1: cắt chuỗi thành mảng theo dấu trong ngoặc
+    let count = 0;
+    let arr =str.split(" ");
+    for (let i = 0; i<arr.length; i++) {
+        if(arr[i] !== "") {
+            count++
+        }
+    }
+    console.log(count);
+    //cách 2:
+    str= str.trim();
+    let count = 1;
+    for (let i = 0; i<str.length; i++) {
+        if(str[i] === " " && str[i+1] !== " ") {
+            count++
+        }
+    }
+    console.log(count);
+</script>
+</body>
+</html>
